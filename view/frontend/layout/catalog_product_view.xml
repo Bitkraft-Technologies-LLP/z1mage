@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<page layout="1column" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+<!-- <head>
+    <script src="Zineone_Z1Connector/js/product_page.js" />
+    <scripts src="Magento_Customer/js/customer-data.js"/>
+</head> -->
+    <body>
+        <referenceContainer name="before.body.end">
+            <block class="Zineone\Z1Connector\Block\CustomBlock" template="Zineone_Z1Connector::product_page.phtml" name="product_view"/>
+
+        </referenceContainer>
+    </body>
+</page>

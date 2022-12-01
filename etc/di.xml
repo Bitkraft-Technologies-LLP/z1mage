@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    	xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+
+    <type name="Magento\Framework\App\Action\AbstractAction">
+    	<plugin name="customer-session-data-to-context" type="Zineone\Z1Connector\Plugin\CustomerSessionContext" sortOrder="1"/>
+         <arguments>
+            <argument name="customersessionproxy" xsi:type="object">Magento\Customer\Model\Session\Proxy</argument>
+            <argument name="httpcontextproxy" xsi:type="object">Magento\Framework\App\Http\Context\Proxy</argument>
+            <argument name="sessionproxy" xsi:type="object">Magento\Checkout\Model\Session\Proxy</argument>
+            <argument name="cartproxy" xsi:type="object">Magento\Checkout\Model\Cart\Proxy</argument>
+            <argument name="loggerproxy" xsi:type="object">Psr\Log\LoggerInterface\Proxy</argument>
+        </arguments>
+	</type>
+   
+	<type name="Magento\ConfigurableProduct\Block\Product\View\Type\Configurable">
+        <plugin disabled="false" name="Zineone_Extension_Plugin_ConfigurableProduct_Block_Product_View_Type_Configurable" sortOrder="1" type="Zineone\Z1Connector\Plugin\ConfigurableView"/>
+    </type>
+ 
+    <type name="Magento\Swatches\Block\Product\Renderer\Configurable">
+        <plugin disabled="false" name="Zineone_Extension_ConfigurableSkuSwitch_Plugin_Magento_Swatches_Block_Product_Renderer_Configurable" sortOrder="1" type="Zineone\Z1Connector\Plugin\ConfigurableRenderer"/>
+    </type>
+
+    <type name="Magento\Checkout\Controller\Cart\Add">
+        <plugin disabled="false" name="Zineone_Extension_Add_To_Cart" sortOrder="1" type="Zineone\Z1Connector\Controller\Cart\Add"/>
+        <arguments>
+            <argument name="httpproxy" xsi:type="object">Magento\Framework\App\Request\Http\Proxy</argument>
+            <argument name="registryproxy" xsi:type="object">Magento\Framework\Registry\Proxy</argument>
+            <argument name="objectmanagerproxy" xsi:type="object">Magento\Framework\ObjectManagerInterface\Proxy</argument>
+            <argument name="sessionproxy" xsi:type="object">Magento\Checkout\Model\Session\Proxy</argument>
+            <argument name="repositoryproxy" xsi:type="object">Magento\Catalog\Api\ProductRepositoryInterface\Proxy</argument>
+        </arguments>
+    </type>
+
+</config>

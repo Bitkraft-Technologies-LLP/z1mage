@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+<table name="zineone_connector_options">
+    <column xsi:type="int" name="id" unsigned="true" nullable="false" comment="Id"/>
+    <column xsi:type="varchar" name="config_name" nullable="false" comment="config_name"/>
+    <column xsi:type="varchar" name="value" nullable="false" comment="Config Value"/>
+    <constraint xsi:type="primary" referenceId="PRIMARY">
+        <column name="id"/>
+    </constraint>
+</table>
+</schema>

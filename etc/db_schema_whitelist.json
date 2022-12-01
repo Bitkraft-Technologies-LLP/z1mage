@@ -1,0 +1,12 @@
+{
+    "zineone_connector_options": {
+        "column": {
+            "id": true,
+            "config_name": true,
+            "value": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    }
+}

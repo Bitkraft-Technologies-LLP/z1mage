@@ -1,0 +1,16 @@
+<div data-zineone-widget="z1_content_widget" style="display: none"></div>
+
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "data_utils" : {
+                "customerID": "<?php echo $block->getCustomerId(); ?>",
+                "zineone_api_key": "<?php echo $block->getConfigData('zineone_api_key'); ?>",
+                "zineone_send_data": "<?php echo $block->getConfigData('zineone_send_data'); ?>",
+                "zineone_logging_enabled": "<?php echo $block->getConfigData('zineone_logging_enabled'); ?>"
+                            
+            }
+
+        }
+    }
+</script>

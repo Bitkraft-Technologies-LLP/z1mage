@@ -1,0 +1,29 @@
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "checkout_onepage_success" : {
+                "orderId": "<?php echo $block->getOrderData()->getEntityId(); ?>",
+                "revenue": "<?php echo $block->getOrderData()->getSubtotal(); ?>",
+                "totalSalesTax": "<?php echo $block->getOrderData()->getTaxAmount(); ?>",
+                "products": <?php
+                
+                $orderItems = $block->getOrderData()->getAllItems();
+
+                $orderProducts = array();
+                foreach ($orderItems as $item) {
+                    
+                    $tempObj = array();
+                    $tempObj["productId"] = $item->getProductId();
+                    $tempObj["quantity"] = $item->getQtyOrdered();
+                    $tempObj["priceSale"] = $item->getPrice();
+                    $tempObj["priceOrig"] = $item->getPrice();
+                    $tempObj["sku"] = $item->getSku();
+                    array_push($orderProducts,$tempObj);
+                }
+                    
+                    echo json_encode($orderProducts);      
+                ?>
+            }
+        }
+    }
+</script>

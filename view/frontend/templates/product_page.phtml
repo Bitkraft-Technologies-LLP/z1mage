@@ -1,0 +1,40 @@
+<!-- <div data-mage-init='{"product_page": {"message": "HELLO Z1"}}'>
+    MY CUSTOM CONTENT DIV
+</div> -->
+
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "product_page" : {
+                "category": "<?php echo $block->getCurrentProductCategory() ?>",
+                "productId": "<?php echo $block->getCurrentProduct()->getID(); ?>",
+                "sku": "<?php echo $block->getCurrentProduct()->getSku(); ?>",
+                "priceOrig": "<?php echo $block->getCurrentProductOriginalPrice(); ?>",
+                "priceSale": "<?php echo $block->getCurrentProductSpecialPrice(); ?>"
+                
+            }
+            
+        }
+    }
+
+</script>
+<!-- <script type="text/x-magento-init">
+    {
+        "*": {
+            "MyAddToCart": {"key": "value"}
+        }
+    }
+</script> -->
+<!-- <script type="text/x-magento-init">
+   {
+       "*": {
+           "Magento_Ui/js/core/app": {
+               "components": {
+                   "custom-cart-section": {
+                       "component": "Zineone_Z1Connector/js/product_page"
+                   }
+               }
+           }
+       }
+   }
+</script> -->

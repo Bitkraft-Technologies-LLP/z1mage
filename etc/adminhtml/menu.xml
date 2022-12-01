@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+	<menu>
+
+       <add id="Zineone_Z1Connector::top_level_1" 
+           title="ZineOne" 
+           translate="title"
+           module="Zineone_Z1Connector" 
+           sortOrder="90"
+           resource="Zineone_Z1Connector::top_level"
+           action="z1config/z1config/index/id/config"
+       />
+	  
+	</menu>
+
+  
+</config>
