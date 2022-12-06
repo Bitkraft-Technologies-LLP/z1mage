@@ -10,17 +10,17 @@ define([
         var eventSent = false;
         var cart = customerData.get('cart');
 
-        z1Util.log("Into cart_page.js", config, cart);
-
         cart.subscribe(function () {
 
             if (eventSent == false) {
                 eventSent = true;
-                z1Util.pushEvent("webViewCart", {});
+                //z1Util.pushEvent("webViewCart", {});
             }
 
 
         }, this);
+
+        z1Util.pushEvent("webViewCart", {});
 
     }
 });

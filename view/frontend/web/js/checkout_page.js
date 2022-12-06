@@ -17,11 +17,14 @@ define([
         if (eventInitializaed == false) {
 
             eventInitializaed = true;
-            z1Util.pushEvent("webCheckout", {});
-            initCheckoutPageEvents();
+            // z1Util.pushEvent("webCheckout", {});
+            // initCheckoutPageEvents();
         }
 
     });
+
+    z1Util.pushEvent("webCheckout", {});
+    initCheckoutPageEvents();
 
 
 
