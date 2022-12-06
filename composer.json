@@ -1,5 +1,5 @@
 {
-    "name": "zineone/zineone-connector-adobe-commerce",
+    "name": "zineone/zineone-connector-adobe-commerce-public",
     "description": "N/A",
     "config": {
         "sort-packages": true
