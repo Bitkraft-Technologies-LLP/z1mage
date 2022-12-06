@@ -20,7 +20,8 @@ define([
 
         }, this);
 
-        z1Util.pushEvent("webViewCart", {});
-
+        if (cart().summary_count) {
+            z1Util.pushEvent("webViewCart", {});
+        }
     }
 });
