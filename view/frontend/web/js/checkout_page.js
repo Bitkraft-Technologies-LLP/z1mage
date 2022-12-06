@@ -63,9 +63,15 @@ define([
             z1Util.pushEvent("webshipping", {});
         }, this);
 
-        $(document).on('change', 'input[name="payment[method]"]', function () {
+        quote.paymentMethod.subscribe(function () {
 
             z1Util.pushEvent("webpayment", {});
+
+        });
+
+        $(document).on('change', 'input[name="payment[method]"]', function () {
+
+            //z1Util.pushEvent("webpayment", {});
 
         });
     }
