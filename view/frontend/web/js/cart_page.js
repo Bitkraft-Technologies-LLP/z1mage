@@ -9,6 +9,9 @@ define([
 
         var eventSent = false;
         var cart = customerData.get('cart');
+
+        z1Util.log("Into cart_page.js", config, cart);
+
         cart.subscribe(function () {
 
             if (eventSent == false) {
