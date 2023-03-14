@@ -5,6 +5,6 @@ define([
 ], function($, dataUtils, z1Util) {
     "use strict";
     return function(config) {
-        z1Util.pushEvent("webPDP",config);
+        z1Util.pushEvent("view_product",config);
     }
 });

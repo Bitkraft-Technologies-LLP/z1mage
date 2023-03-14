@@ -24,7 +24,7 @@ define([
              * Log after the original function
              */
 
-            z1Util.pushEvent("webshipping", {});
+            z1Util.pushEvent("add_shipping_info", {});
 
             return result;
         });

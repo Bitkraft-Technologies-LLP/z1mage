@@ -106,10 +106,10 @@ class UpdateItemOptions
         $content = [
         'productId' => $productId,
         'category' => $prodCat,
-        'original_price' => $ogPrice,
-        'special_price' => $spPrice,
+        'priceOrig' => $ogPrice,
+        'priceSale' => $spPrice,
         'sku' => $product->getSku(),
-        'qty' => $qty];
+        'quantity' => $qty];
         $subject->getResponse()->representJson($this->objectManager->
         get('Magento\Framework\Json\Helper\DataUse::class')->jsonEncode($content));
         return $subject->getResponse();

@@ -145,7 +145,7 @@ define([
         finalPayload["eventName"] = eventName;
 
         logFunction("finalPayload: ", finalPayload);
-        if (eventName == "placedOrder") {
+        if (eventName == "purchase") {
             if (finalPayload["products"]) {
                 finalPayload["products"] = JSON.stringify(finalPayload["products"])
             }

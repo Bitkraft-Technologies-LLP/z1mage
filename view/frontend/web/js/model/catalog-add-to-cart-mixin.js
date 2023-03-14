@@ -87,7 +87,7 @@ define([
                             if(isSubscribedCalled == false)
                             {   
                                 z1Util.setAddToCart(false);
-                                z1Util.pushEvent("webAddToCart",res);
+                                z1Util.pushEvent("add_to_cart",res);
                             }
                            
                             isSubscribedCalled = true;

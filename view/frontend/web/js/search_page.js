@@ -10,6 +10,6 @@ define([
         //z1Util.log("Search Data",config);
         var payload = {};
         payload["searchTerm"] = config["searchterms"];
-        z1Util.pushEvent("webSearchResults", payload);
+        z1Util.pushEvent("search", payload);
     }
 });

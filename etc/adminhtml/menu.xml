@@ -3,7 +3,7 @@
 	<menu>
 
        <add id="Zineone_Z1Connector::top_level_1" 
-           title="ZineOne" 
+           title="Session AI" 
            translate="title"
            module="Zineone_Z1Connector" 
            sortOrder="90"

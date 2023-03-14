@@ -7,6 +7,6 @@ define([
     "use strict";
     return function(config) {
         z1Util.setCheckout(true);
-        z1Util.pushEvent("placedOrder",config);
+        z1Util.pushEvent("purchase",config);
     }
 });

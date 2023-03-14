@@ -14,14 +14,14 @@ define([
 
             if (eventSent == false) {
                 eventSent = true;
-                //z1Util.pushEvent("webViewCart", {});
+                //z1Util.pushEvent("view_cart", {});
             }
 
 
         }, this);
 
         if (cart().summary_count) {
-            z1Util.pushEvent("webViewCart", {});
+            z1Util.pushEvent("view_cart", {});
         }
     }
 });

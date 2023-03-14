@@ -20,7 +20,7 @@ define(['jquery', 'Magento_Customer/js/customer-data', 'data_utils', 'z1_connect
                 //Check to See cart updation
                 switch (checkCart(lastCartStr, newCartStr)) {
                     case 1:
-                        //z1Util.pushEvent("webAddToCart", {});
+                        //z1Util.pushEvent("add_to_cart", {});
                         z1Util.setAddToCart(false);
                         break;
 
@@ -31,7 +31,7 @@ define(['jquery', 'Magento_Customer/js/customer-data', 'data_utils', 'z1_connect
                             return;
                         }
                         if (z1Util.isCheckout() == false) {
-                            z1Util.pushEvent("webUpdateCart", {});
+                            z1Util.pushEvent("update_cart", {});
                         }
 
                         break;

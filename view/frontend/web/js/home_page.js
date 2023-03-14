@@ -7,7 +7,7 @@ define([
     "use strict";
 
     return function(config) {
-        z1Util.pushEvent("webhome", {});
+        z1Util.pushEvent("view_home", {});
     }
 
 });

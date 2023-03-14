@@ -17,13 +17,13 @@ define([
         if (eventInitializaed == false) {
 
             eventInitializaed = true;
-            // z1Util.pushEvent("webCheckout", {});
+            // z1Util.pushEvent("begin_checkout", {});
             // initCheckoutPageEvents();
         }
 
     });
 
-    z1Util.pushEvent("webCheckout", {});
+    z1Util.pushEvent("begin_checkout", {});
     initCheckoutPageEvents();
 
 
@@ -42,7 +42,7 @@ define([
                 return;
             }
             lastBillingAddress = JSON.stringify(address);
-            z1Util.pushEvent("webshipping", {});
+            z1Util.pushEvent("add_shipping_info", {});
         }, this);
 
 
@@ -60,18 +60,18 @@ define([
             }
 
             lastShippingAddress = JSON.stringify(address);
-            z1Util.pushEvent("webshipping", {});
+            z1Util.pushEvent("add_shipping_info", {});
         }, this);
 
-        quote.paymentMethod.subscribe(function () {
+        quote.paymentMethod.subscribe(function (data) {
 
-            z1Util.pushEvent("webpayment", {});
+            z1Util.pushEvent("add_payment_info", {});
 
         });
 
         $(document).on('change', 'input[name="payment[method]"]', function () {
 
-            //z1Util.pushEvent("webpayment", {});
+            //z1Util.pushEvent("add_payment_info", {});
 
         });
     }

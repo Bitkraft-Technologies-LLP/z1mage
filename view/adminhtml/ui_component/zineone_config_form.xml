@@ -82,7 +82,7 @@
                     <settings>
                               <dataType>text</dataType>
                               <visible>true</visible>
-                              <label translate="true">Zineone API key</label>
+                              <label translate="true">Session AI API key</label>
                     </settings>
                </field>
 

@@ -8,6 +8,6 @@ define([
 
         var payload = {};
         payload["category"] = config["category"];
-        z1Util.pushEvent("webCategoryPage",payload);
+        z1Util.pushEvent("view_category",payload);
     }
 });

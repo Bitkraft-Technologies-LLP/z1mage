@@ -18,7 +18,7 @@ define([
 
                 $('div.product-info-main .sku .value').html(simpleSku);
 
-                z1Util.pushEvent("webviewedsku", simpleSkuObj);
+                z1Util.pushEvent("view_sku", simpleSkuObj);
             }
             return result;
         });
